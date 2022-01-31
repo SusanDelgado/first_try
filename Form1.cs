@@ -259,6 +259,28 @@ namespace Создатель_расчетов
                                 textBox17.Text = $"{childnode_of_child_0.InnerText}";
                         }
                     }
+                    if (xnode.Name == "lamination")
+                    {
+                        foreach (XmlNode childnode_of_child_0 in xnode.ChildNodes)
+                        {
+                            if (childnode_of_child_0.Name == "roll_price")
+                                textBox9.Text = $"{childnode_of_child_0.InnerText}";
+                            if (childnode_of_child_0.Name == "number_of_meters")
+                                textBox19.Text = $"{childnode_of_child_0.InnerText}";
+                        }
+                    }
+
+                    if (xnode.Name == "metal_bind")
+                    {
+                        foreach (XmlNode childnode_of_child_0 in xnode.ChildNodes)
+                        {
+                            if (childnode_of_child_0.Name == "coil_price")
+                                textBox20.Text = $"{childnode_of_child_0.InnerText}";
+                            if (childnode_of_child_0.Name == "number_of_loops")
+                                textBox11.Text = $"{childnode_of_child_0.InnerText}";
+                        }
+                    }
+
                 }
             }
             catch(Exception ex)
@@ -325,6 +347,8 @@ namespace Создатель_расчетов
                 DataColumn staple_countColumn = new DataColumn("staple_count", Type.GetType("System.Int32"));
                 DataColumn color_paintColumn = new DataColumn("color_paint", Type.GetType("System.Int32"));
                 DataColumn hard_leafColumn = new DataColumn("hard_leaf", Type.GetType("System.Int32"));
+                DataColumn laminationColumn = new DataColumn("lamination", Type.GetType("System.Double"));
+                DataColumn metal_bindColumn = new DataColumn("metal_bind", Type.GetType("System.Double"));
 
                 application_table.Columns.Add(idColumn);
                 application_table.Columns.Add(nameColumn);
@@ -335,6 +359,8 @@ namespace Создатель_расчетов
                 application_table.Columns.Add(staple_countColumn);
                 application_table.Columns.Add(color_paintColumn);
                 application_table.Columns.Add(hard_leafColumn);
+                application_table.Columns.Add(laminationColumn);
+                application_table.Columns.Add(metal_bindColumn);
 
                 int counter = 1;
                 string product_name = "";
@@ -348,6 +374,9 @@ namespace Создатель_расчетов
                 int temp_paper_type = 0;
                 int temp_paper_count = 0;
                 double temp_defect = 0;
+                double lamination = 0;
+                double metal_bind = 0;
+
                 foreach (XmlNode xnode in xRoot)
                 {
                     foreach (XmlNode childnode in xnode.ChildNodes)
@@ -394,6 +423,14 @@ namespace Создатель_расчетов
                                 {
                                     hard_leaf = Int32.Parse(childofchildnode.InnerText);
                                 }
+                                if (childofchildnode.Name == "metal_bind")
+                                {
+                                    metal_bind = Double.Parse(childofchildnode.InnerText);
+                                }
+                                if (childofchildnode.Name == "lamination")
+                                {
+                                    lamination = Double.Parse(childofchildnode.InnerText);
+                                }
                                 if (childofchildnode.Name == "master")
                                 {
                                     master = Int32.Parse(childofchildnode.InnerText);
@@ -406,7 +443,7 @@ namespace Создатель_расчетов
                                 {
                                     paper_id = counter;
                                     staple_count = Int32.Parse(childofchildnode.InnerText);
-                                    row.ItemArray = new object[] { counter, product_name, product_count, paper_id, master, staple_type, staple_count, color_paint, hard_leaf};
+                                    row.ItemArray = new object[] { counter, product_name, product_count, paper_id, master, staple_type, staple_count, color_paint, hard_leaf, lamination, metal_bind};
                                     application_table.Rows.Add(row);
                                     counter++;
 
@@ -596,7 +633,7 @@ namespace Создатель_расчетов
             dataGridView1.Rows[row_datagrid1].Cells[2].Value = "";
 
             DataRow row = application_table.NewRow();
-            row.ItemArray = new object[] { dataGridView1.Rows.Count, "", 0, dataGridView1.Rows.Count, 0, 99, 0, 0, 0};
+            row.ItemArray = new object[] { dataGridView1.Rows.Count, "", 0, dataGridView1.Rows.Count, 0, 99, 0, 0, 0, 0, 0};
             application_table.Rows.Add(row);
         }
 
@@ -707,29 +744,24 @@ namespace Создатель_расчетов
                             checkBox1.Checked = false;
                         }
 
+                        if (Int32.Parse(application_table.Rows[i][8].ToString()) == 0)
+                        {
+                            comboBox5.SelectedIndex = 0;
+                        }
                         if (Int32.Parse(application_table.Rows[i][8].ToString()) == 1)
                         {
-                            checkBox14.Checked = true;
-                            checkBox2.Checked = true;
+                            comboBox5.SelectedIndex = 1;
                         }
                         if (Int32.Parse(application_table.Rows[i][8].ToString()) == 2)
                         {
-                            checkBox14.Checked = true;
-                            checkBox3.Checked = true;
+                            comboBox5.SelectedIndex = 2;
                         }
                         if (Int32.Parse(application_table.Rows[i][8].ToString()) == 3)
                         {
-                            checkBox14.Checked = true;
-                            checkBox13.Checked = true;
+                            comboBox5.SelectedIndex = 3;
                         }
-                        else
-                        {
-                            checkBox14.Checked = false;
-                            checkBox2.Checked = false;
-                            checkBox3.Checked = false;
-                            checkBox13.Checked = false;
-                        }
-
+                        textBox21.Text = application_table.Rows[i][9].ToString();
+                        textBox22.Text = application_table.Rows[i][10].ToString();
                     }
                 }
                 catch (Exception ex)
@@ -1063,6 +1095,27 @@ namespace Создатель_расчетов
                             textBox17.Text = $"{childnode_of_child_0.InnerText}";
                     }
                 }
+                if (xnode.Name == "lamination")
+                {
+                    foreach (XmlNode childnode_of_child_0 in xnode.ChildNodes)
+                    {
+                        if (childnode_of_child_0.Name == "roll_price")
+                            textBox9.Text = $"{childnode_of_child_0.InnerText}";
+                        if (childnode_of_child_0.Name == "number_of_meters")
+                            textBox19.Text = $"{childnode_of_child_0.InnerText}";
+                    }
+                }
+
+                if (xnode.Name == "metal_bind")
+                {
+                    foreach (XmlNode childnode_of_child_0 in xnode.ChildNodes)
+                    {
+                        if (childnode_of_child_0.Name == "coil_price")
+                            textBox20.Text = $"{childnode_of_child_0.InnerText}";
+                        if (childnode_of_child_0.Name == "number_of_loops")
+                            textBox11.Text = $"{childnode_of_child_0.InnerText}";
+                    }
+                }
             }
 
             XmlDocument xDoc = new XmlDocument();
@@ -1115,6 +1168,8 @@ namespace Создатель_расчетов
             int temp_paper_type = 0;
             int temp_paper_count = 0;
             double temp_defect = 0;
+            double lamination = 0;
+            double metal_bind = 0;
             foreach (XmlNode xnode in xRoot)
             {
                 foreach (XmlNode childnode in xnode.ChildNodes)
@@ -1161,6 +1216,14 @@ namespace Создатель_расчетов
                             {
                                 hard_leaf = Int32.Parse(childofchildnode.InnerText);
                             }
+                            if (childofchildnode.Name == "metal_bind")
+                            {
+                                metal_bind = Double.Parse(childofchildnode.InnerText);
+                            }
+                            if (childofchildnode.Name == "lamination")
+                            {
+                                lamination = Double.Parse(childofchildnode.InnerText);
+                            }
                             if (childofchildnode.Name == "master")
                             {
                                 master = Int32.Parse(childofchildnode.InnerText);
@@ -1173,7 +1236,7 @@ namespace Создатель_расчетов
                             {
                                 paper_id = counter;
                                 staple_count = Int32.Parse(childofchildnode.InnerText);
-                                row.ItemArray = new object[] { counter, product_name, product_count, paper_id, master, staple_type, staple_count, color_paint, hard_leaf };
+                                row.ItemArray = new object[] { counter, product_name, product_count, paper_id, master, staple_type, staple_count, color_paint, hard_leaf, lamination, metal_bind};
                                 application_table.Rows.Add(row);
                                 counter++;
 
@@ -1311,6 +1374,16 @@ namespace Создатель_расчетов
                     xmlroot.LastChild.LastChild.AppendChild(hard_leaf);
                     XmlText hard_leaf_text = save_Doc.CreateTextNode(application_table.Rows[i][8].ToString());
                     xmlroot.LastChild.LastChild.LastChild.AppendChild(hard_leaf_text);
+
+                    XmlElement used_lamination = save_Doc.CreateElement("lamination");
+                    xmlroot.LastChild.LastChild.AppendChild(used_lamination);
+                    XmlText used_lamination_text = save_Doc.CreateTextNode(application_table.Rows[i][9].ToString());
+                    xmlroot.LastChild.LastChild.LastChild.AppendChild(used_lamination_text);
+
+                    XmlElement used_metal_bind = save_Doc.CreateElement("metal_bind");
+                    xmlroot.LastChild.LastChild.AppendChild(used_metal_bind);
+                    XmlText used_metal_bind_text = save_Doc.CreateTextNode(application_table.Rows[i][10].ToString());
+                    xmlroot.LastChild.LastChild.LastChild.AppendChild(used_metal_bind_text);
 
                     XmlElement master = save_Doc.CreateElement("master");
                     xmlroot.LastChild.LastChild.AppendChild(master);
@@ -1473,6 +1546,32 @@ namespace Создатель_расчетов
                 XmlText Cover_priceA5_text = new_doc.CreateTextNode(textBox17.Text);
                 Cover_priceA5.AppendChild(Cover_priceA5_text);
                 Hard_leaf.AppendChild(Cover_priceA5);
+
+                XmlElement lamination = new_doc.CreateElement("lamination");
+                new_elem.AppendChild(lamination);
+
+                XmlElement roll_price = new_doc.CreateElement("roll_price");
+                XmlText roll_price_text = new_doc.CreateTextNode(textBox9.Text);
+                roll_price.AppendChild(roll_price_text);
+                lamination.AppendChild(roll_price);
+
+                XmlElement number_of_meters = new_doc.CreateElement("number_of_meters");
+                XmlText number_of_meters_text = new_doc.CreateTextNode(textBox19.Text);
+                number_of_meters.AppendChild(number_of_meters_text);
+                lamination.AppendChild(number_of_meters);
+
+                XmlElement metal_bind = new_doc.CreateElement("metal_bind");
+                new_elem.AppendChild(metal_bind);
+
+                XmlElement coil_price = new_doc.CreateElement("coil_price");
+                XmlText coil_price_text = new_doc.CreateTextNode(textBox20.Text);
+                coil_price.AppendChild(coil_price_text);
+                metal_bind.AppendChild(coil_price);
+
+                XmlElement number_of_loops = new_doc.CreateElement("number_of_loops");
+                XmlText number_of_loops_text = new_doc.CreateTextNode(textBox11.Text);
+                number_of_loops.AppendChild(number_of_loops_text);
+                metal_bind.AppendChild(number_of_loops);
 
                 new_doc.Save("consumables.xml");
             }
@@ -1804,11 +1903,22 @@ namespace Создатель_расчетов
                         }
                         double total_cost = 0;
                         double cost_of_1 = 0;
+                        double metal_bind = 0;
+                        double lamination = 0;
+                        double number_of_used_loops = Double.Parse(application_table.Rows[i][10].ToString());
+                        double coil_price = Double.Parse(textBox20.Text);
+                        double number_of_loops = Double.Parse(textBox11.Text);
+                        metal_bind = (coil_price/ number_of_loops) * number_of_used_loops;
+                        double number_of_used_meters = Double.Parse(application_table.Rows[i][9].ToString());
+                        double roll_price = Double.Parse(textBox9.Text);
+                        double number_of_meters = Double.Parse(textBox19.Text);
+                        lamination = (roll_price/ number_of_meters) * number_of_used_meters;
+
                         if (staple_type == 99) 
                         {
-                            total_cost = Math.Round((paper_cost) + ((master_count * Double.Parse(label12.Text))) + (paint_cost) + hard_leaf_cost, 2);
+                            total_cost = Math.Round((paper_cost) + ((master_count * Double.Parse(label12.Text))) + (paint_cost) + lamination + metal_bind + hard_leaf_cost, 2);
                             cost_of_1 = Math.Round(((paper_cost) +
-                                (paint_cost) + ((master_count * Double.Parse(label12.Text)) + hard_leaf_cost)) / product_count, 2);
+                                (paint_cost) + ((master_count * Double.Parse(label12.Text)) + lamination + metal_bind + hard_leaf_cost)) / product_count, 2);
                             if (cost_of_1 < double.Parse("0,01"))
                                 cost_of_1 = double.Parse("0,01");
                             total_cost = product_count * cost_of_1;
@@ -1818,9 +1928,9 @@ namespace Создатель_расчетов
                         {
                             total_cost = Math.Round((paper_cost) + ((master_count * Double.Parse(label12.Text)) + staple_count *
                                 Double.Parse(dataGridView3.Rows[staple_type].Cells[3].Value.ToString())) +
-                                (paint_cost) + hard_leaf_cost, 2);
+                                (paint_cost) + lamination + metal_bind + hard_leaf_cost, 2);
                             cost_of_1 = Math.Round(((paper_cost) +
-                                (paint_cost) + ((master_count * Double.Parse(label12.Text)) + hard_leaf_cost + staple_count *
+                                (paint_cost) + ((master_count * Double.Parse(label12.Text)) + hard_leaf_cost + lamination + metal_bind + staple_count *
                                 Double.Parse(dataGridView3.Rows[staple_type].Cells[3].Value.ToString()))) / product_count, 2);
                             if (cost_of_1 < double.Parse("0,01"))
                                 cost_of_1 = double.Parse("0,01");
@@ -2008,15 +2118,21 @@ namespace Создатель_расчетов
                     int width = 0;
                     int color_paint_used = 0;
                     int hard_leaf_used = 0;
+                    int lamination_used = 0;
+                    int metal_bind_used = 0;
                     for (int i = 0; i < application_table.Rows.Count; i++)
                     {
                         if (application_table.Rows[i][7].ToString() == "1")
                             color_paint_used = 1;
                         if (application_table.Rows[i][8].ToString() == "1")
                             hard_leaf_used = 2;
+                        if (Double.Parse(application_table.Rows[i][9].ToString()) > 0)
+                            lamination_used = 2;
+                        if (Double.Parse(application_table.Rows[i][10].ToString()) > 0)
+                            metal_bind_used = 2;
                     }
 
-                    width = 10 + color_paint_used + hard_leaf_used + result.Length * 3 + staples_mass.Length * 2;
+                    width = 10 + color_paint_used + lamination_used + metal_bind_used + hard_leaf_used + result.Length * 3 + staples_mass.Length * 2;
 
                     excelApp = new Excel.Application();
                     Excel.Workbook workBook;
@@ -2187,7 +2303,7 @@ namespace Создатель_расчетов
                     for (int i = staples_mass.Length - 1; i >= 0; i--)
                     {
                         
-                        range = workSheet.Range[workSheet.Cells[4, width - 2 - hard_leaf_used - (i + 1) * 2], workSheet.Cells[4, width - 1 - hard_leaf_used - (i + 1) * 2]];
+                        range = workSheet.Range[workSheet.Cells[4, width - 2 - lamination_used - metal_bind_used - hard_leaf_used - (i + 1) * 2], workSheet.Cells[4, width - 1 - lamination_used - metal_bind_used - hard_leaf_used - (i + 1) * 2]];
                         range.Merge();
                         range.Font.Name = "Times New Roman";
                         range.Font.Bold = 0;
@@ -2199,7 +2315,7 @@ namespace Создатель_расчетов
                         range.VerticalAlignment = Excel.Constants.xlCenter;
                         range.Value = dataGridView3.Rows[staples_mass[i]].Cells[0].Value.ToString();
 
-                        range = workSheet.Cells[5, width - 2 - hard_leaf_used - (i + 1) * 2];
+                        range = workSheet.Cells[5, width - 2 - lamination_used - metal_bind_used - hard_leaf_used - (i + 1) * 2];
                         range.Font.Name = "Times New Roman";
                         range.Font.Bold = 0;
                         range.Font.Size = 7;
@@ -2212,7 +2328,7 @@ namespace Создатель_расчетов
                         range.VerticalAlignment = Excel.Constants.xlCenter;
                         range.Value = "количество (штук)";
 
-                        range = workSheet.Cells[5, width - 1 - hard_leaf_used - (i + 1) * 2];
+                        range = workSheet.Cells[5, width - 1 - lamination_used - metal_bind_used - hard_leaf_used - (i + 1) * 2];
                         range.Font.Name = "Times New Roman";
                         range.Font.Bold = 0;
                         range.Font.Size = 7;
@@ -2351,6 +2467,78 @@ namespace Создатель_расчетов
                         range.HorizontalAlignment = Excel.Constants.xlCenter;
                         range.VerticalAlignment = Excel.Constants.xlCenter;
                         range.Value = "стоимость канала";
+                    }
+
+                    if (lamination_used > 0)
+                    {
+                        range = workSheet.Range[workSheet.Cells[4, width - 4 - hard_leaf_used], workSheet.Cells[4, width - 3 - hard_leaf_used]];
+                        range.Merge();
+                        range.Font.Name = "Times New Roman";
+                        range.Font.Bold = 0;
+                        range.Font.Size = 7;
+                        range.WrapText = true;
+                        range.Borders.LineStyle = Excel.XlLineStyle.xlContinuous;
+                        range.HorizontalAlignment = Excel.Constants.xlCenter;
+                        range.VerticalAlignment = Excel.Constants.xlCenter;
+                        range.Value = "Ламинация";
+
+                        range = workSheet.Cells[5, width - 4 - hard_leaf_used];
+                        range.Font.Name = "Times New Roman";
+                        range.Font.Bold = 0;
+                        range.Font.Size = 7;
+                        range.Orientation = 90;
+                        range.WrapText = true;
+                        range.Borders.LineStyle = Excel.XlLineStyle.xlContinuous;
+                        range.HorizontalAlignment = Excel.Constants.xlCenter;
+                        range.VerticalAlignment = Excel.Constants.xlCenter;
+                        range.Value = "Израсходовано метров пленки";
+
+                        range = workSheet.Cells[5, width - 3 - hard_leaf_used];
+                        range.Font.Name = "Times New Roman";
+                        range.Font.Bold = 0;
+                        range.Font.Size = 7;
+                        range.Orientation = 90;
+                        range.WrapText = true;
+                        range.Borders.LineStyle = Excel.XlLineStyle.xlContinuous;
+                        range.HorizontalAlignment = Excel.Constants.xlCenter;
+                        range.VerticalAlignment = Excel.Constants.xlCenter;
+                        range.Value = "Стоимость";
+                    }
+
+                    if (metal_bind_used > 0)
+                    {
+                        range = workSheet.Range[workSheet.Cells[4, width - 4 - hard_leaf_used - lamination_used], workSheet.Cells[4, width - 3 - hard_leaf_used - lamination_used]];
+                        range.Merge();
+                        range.Font.Name = "Times New Roman";
+                        range.Font.Bold = 0;
+                        range.Font.Size = 7;
+                        range.WrapText = true;
+                        range.Borders.LineStyle = Excel.XlLineStyle.xlContinuous;
+                        range.HorizontalAlignment = Excel.Constants.xlCenter;
+                        range.VerticalAlignment = Excel.Constants.xlCenter;
+                        range.Value = "Перфорация на металическую пружину";
+
+                        range = workSheet.Cells[5, width - 4 - hard_leaf_used - lamination_used];
+                        range.Font.Name = "Times New Roman";
+                        range.Font.Bold = 0;
+                        range.Font.Size = 7;
+                        range.Orientation = 90;
+                        range.WrapText = true;
+                        range.Borders.LineStyle = Excel.XlLineStyle.xlContinuous;
+                        range.HorizontalAlignment = Excel.Constants.xlCenter;
+                        range.VerticalAlignment = Excel.Constants.xlCenter;
+                        range.Value = "Израсходовано петель";
+
+                        range = workSheet.Cells[5, width - 3 - hard_leaf_used - lamination_used];
+                        range.Font.Name = "Times New Roman";
+                        range.Font.Bold = 0;
+                        range.Font.Size = 7;
+                        range.Orientation = 90;
+                        range.WrapText = true;
+                        range.Borders.LineStyle = Excel.XlLineStyle.xlContinuous;
+                        range.HorizontalAlignment = Excel.Constants.xlCenter;
+                        range.VerticalAlignment = Excel.Constants.xlCenter;
+                        range.Value = "Стоимость";
                     }
 
                     range = workSheet.Range[workSheet.Cells[4, width - 2], workSheet.Cells[5, width - 2]];
@@ -2499,7 +2687,7 @@ namespace Создатель_расчетов
                         {
                             if (application_table.Rows[i][5].ToString() == staples_mass[j].ToString())
                             {
-                                range = workSheet.Cells[i + 6, width - 2 - hard_leaf_used - (j + 1) * 2];
+                                range = workSheet.Cells[i + 6, width - 2 - hard_leaf_used - lamination_used - metal_bind_used - (j + 1) * 2];
                                 range.Font.Name = "Times New Roman";
                                 range.Font.Bold = 0;
                                 range.Font.Size = 7;
@@ -2510,7 +2698,7 @@ namespace Создатель_расчетов
                                 range.VerticalAlignment = Excel.Constants.xlCenter;
                                 range.Value = staple_count;
 
-                                range = workSheet.Cells[i + 6, width - 1 - hard_leaf_used - (j + 1) * 2];
+                                range = workSheet.Cells[i + 6, width - 1 - hard_leaf_used - lamination_used - metal_bind_used - (j + 1) * 2];
                                 range.Font.Name = "Times New Roman";
                                 range.Font.Bold = 0;
                                 range.Font.Size = 7;
@@ -2587,6 +2775,61 @@ namespace Создатель_расчетов
                             range.HorizontalAlignment = Excel.Constants.xlCenter;
                             range.VerticalAlignment = Excel.Constants.xlCenter;
                             range.Value = Math.Round(temp_price_of_tube * Double.Parse(textBox5.Text), 3);
+                        }
+
+                        double price_of_metal_bind = 0;
+                        if (Double.Parse(application_table.Rows[i][10].ToString()) > 0)
+                        {
+                            MessageBox.Show(application_table.Rows[i][10].ToString());
+                            //Количество израсходованых петель
+                            range = workSheet.Cells[i + 6, width - 4 - lamination_used - hard_leaf_used];
+                            range.Font.Name = "Times New Roman";
+                            range.Font.Bold = 0;
+                            range.Font.Size = 7;
+                            range.WrapText = true;
+                            range.NumberFormat = "0.000";
+                            range.Borders.LineStyle = Excel.XlLineStyle.xlContinuous;
+                            range.HorizontalAlignment = Excel.Constants.xlCenter;
+                            range.VerticalAlignment = Excel.Constants.xlCenter;
+                            range.Value = application_table.Rows[i][10];
+                            //Стоимость
+                            price_of_metal_bind = Math.Round((Double.Parse(textBox20.Text)/ Double.Parse(textBox11.Text)) * Double.Parse(application_table.Rows[i][10].ToString()),3);
+                            range = workSheet.Cells[i + 6, width - 3 - lamination_used - hard_leaf_used];
+                            range.Font.Name = "Times New Roman";
+                            range.Font.Bold = 0;
+                            range.Font.Size = 7;
+                            range.WrapText = true;
+                            range.Borders.LineStyle = Excel.XlLineStyle.xlContinuous;
+                            range.HorizontalAlignment = Excel.Constants.xlCenter;
+                            range.VerticalAlignment = Excel.Constants.xlCenter;
+                            range.Value = price_of_metal_bind;
+                        }
+
+                        double price_of_lamination = 0;
+                        if (Double.Parse(application_table.Rows[i][9].ToString()) > 0)
+                        {
+                            //Количество израсходованых метров
+                            range = workSheet.Cells[i + 6, width - 4 - hard_leaf_used - metal_bind_used];
+                            range.Font.Name = "Times New Roman";
+                            range.Font.Bold = 0;
+                            range.Font.Size = 7;
+                            range.WrapText = true;
+                            range.NumberFormat = "0.000";
+                            range.Borders.LineStyle = Excel.XlLineStyle.xlContinuous;
+                            range.HorizontalAlignment = Excel.Constants.xlCenter;
+                            range.VerticalAlignment = Excel.Constants.xlCenter;
+                            range.Value = application_table.Rows[i][9];
+                            //Стоимость
+                            price_of_lamination = Math.Round((Double.Parse(textBox9.Text) / Double.Parse(textBox19.Text)) * Double.Parse(application_table.Rows[i][9].ToString()),3);
+                            range = workSheet.Cells[i + 6, width - 3 - hard_leaf_used - metal_bind_used];
+                            range.Font.Name = "Times New Roman";
+                            range.Font.Bold = 0;
+                            range.Font.Size = 7;
+                            range.WrapText = true;
+                            range.Borders.LineStyle = Excel.XlLineStyle.xlContinuous;
+                            range.HorizontalAlignment = Excel.Constants.xlCenter;
+                            range.VerticalAlignment = Excel.Constants.xlCenter;
+                            range.Value = price_of_lamination;
                         }
 
                         double hard_leaf_cost = 0;
@@ -2675,7 +2918,7 @@ namespace Создатель_расчетов
                             range.Borders.LineStyle = Excel.XlLineStyle.xlContinuous;
                             range.HorizontalAlignment = Excel.Constants.xlCenter;
                             range.VerticalAlignment = Excel.Constants.xlCenter;
-                            range.Value = Math.Round(((paper_cost) + hard_leaf_cost + paint_cost + ((master_count * Double.Parse(label12.Text)))) / product_count, 3);
+                            range.Value = Math.Round(((paper_cost) + hard_leaf_cost + price_of_lamination + price_of_metal_bind + paint_cost + ((master_count * Double.Parse(label12.Text)))) / product_count, 3);
 
                             range = workSheet.Cells[i + 6, width - 1];
                             range.Font.Name = "Times New Roman";
@@ -2685,7 +2928,7 @@ namespace Создатель_расчетов
                             range.Borders.LineStyle = Excel.XlLineStyle.xlContinuous;
                             range.HorizontalAlignment = Excel.Constants.xlCenter;
                             range.VerticalAlignment = Excel.Constants.xlCenter;
-                            range.Value = Math.Round((paper_cost) + ((master_count * Double.Parse(label12.Text))) + paint_cost + hard_leaf_cost, 3);
+                            range.Value = Math.Round((paper_cost) + price_of_lamination + price_of_metal_bind + ((master_count * Double.Parse(label12.Text))) + paint_cost + hard_leaf_cost, 3);
                         }
                         else
                         {
@@ -2697,7 +2940,7 @@ namespace Создатель_расчетов
                             range.Borders.LineStyle = Excel.XlLineStyle.xlContinuous;
                             range.HorizontalAlignment = Excel.Constants.xlCenter;
                             range.VerticalAlignment = Excel.Constants.xlCenter;
-                            range.Value = Math.Round(((paper_cost) + hard_leaf_cost + paint_cost + ((master_count * Double.Parse(label12.Text)) + staple_count *
+                            range.Value = Math.Round(((paper_cost) + hard_leaf_cost + price_of_lamination + price_of_metal_bind + paint_cost + ((master_count * Double.Parse(label12.Text)) + staple_count *
                                         Double.Parse(dataGridView3.Rows[staple_type].Cells[3].Value.ToString()))) / product_count, 3);
 
                             range = workSheet.Cells[i + 6, width - 1];
@@ -2709,7 +2952,7 @@ namespace Создатель_расчетов
                             range.HorizontalAlignment = Excel.Constants.xlCenter;
                             range.VerticalAlignment = Excel.Constants.xlCenter;
                             range.Value = Math.Round((paper_cost) +
-                                        ((master_count * Double.Parse(label12.Text)) + staple_count *
+                                        ((master_count * Double.Parse(label12.Text)) + price_of_lamination + price_of_metal_bind + staple_count *
                                         Double.Parse(dataGridView3.Rows[staple_type].Cells[3].Value.ToString())) + paint_cost + hard_leaf_cost, 3);
                         }
                     }
@@ -2818,14 +3061,6 @@ namespace Создатель_расчетов
 
         private void checkBox14_CheckedChanged(object sender, EventArgs e)
         {
-            int current_row = dataGridView1.CurrentCell.RowIndex;
-            if (checkBox14.Checked == false)
-            {
-                application_table.Rows[current_row][8] = 0;
-                checkBox2.Checked = false;
-                checkBox3.Checked = false;
-                checkBox13.Checked = false;
-            }
         }
 
         private void textBox7_TextChanged(object sender, EventArgs e)
@@ -2893,53 +3128,14 @@ namespace Создатель_расчетов
 
         private void checkBox2_CheckedChanged(object sender, EventArgs e)
         {
-            //A3 = 1
-            int current_row = dataGridView1.CurrentCell.RowIndex;
-            if (checkBox2.Checked == true)
-            {
-                checkBox14.Checked = true;
-                checkBox3.Checked = false;
-                checkBox13.Checked = false;
-                application_table.Rows[current_row][8] = 1;
-            }
-            else
-            {
-                application_table.Rows[current_row][8] = 0;
-            }
         }
 
         private void checkBox3_CheckedChanged(object sender, EventArgs e)
         {
-            //A4 = 2
-            int current_row = dataGridView1.CurrentCell.RowIndex;
-            if (checkBox3.Checked == true)
-            {
-                checkBox14.Checked = true;
-                checkBox2.Checked = false;
-                checkBox13.Checked = false;
-                application_table.Rows[current_row][8] = 2;
-            }
-            else
-            {
-                application_table.Rows[current_row][8] = 0;
-            }
         }
 
         private void checkBox13_CheckedChanged(object sender, EventArgs e)
         {
-            //A5 = 3
-            int current_row = dataGridView1.CurrentCell.RowIndex;
-            if (checkBox13.Checked == true)
-            {
-                checkBox14.Checked = true;
-                checkBox3.Checked = false;
-                checkBox2.Checked = false;
-                application_table.Rows[current_row][8] = 3;
-            }
-            else
-            {
-                application_table.Rows[current_row][8] = 0;
-            }
         }
 
         private void textBox16_TextChanged(object sender, EventArgs e)
@@ -2968,6 +3164,72 @@ namespace Создатель_расчетов
             string text = textBox17.Text;
             Errors_checker cheker = new Errors_checker();
             textBox17.Text = cheker.textBox_checker(text);
+        }
+
+        private void comboBox5_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox5_DropDownClosed(object sender, EventArgs e)
+        {
+            int current_row = dataGridView1.CurrentCell.RowIndex;
+            if (comboBox5.SelectedIndex == 0)
+            {
+                application_table.Rows[current_row][8] = 0;
+            }
+            if (comboBox5.SelectedIndex == 1)
+            {
+                application_table.Rows[current_row][8] = 1;
+            }
+            if (comboBox5.SelectedIndex == 2)
+            {
+                application_table.Rows[current_row][8] = 2;
+            }
+            if (comboBox5.SelectedIndex == 3)
+            {
+                application_table.Rows[current_row][8] = 3;
+            }
+        }
+
+        private void textBox21_TextChanged(object sender, EventArgs e)
+        {
+            
+            string text = textBox21.Text;
+            Errors_checker cheker = new Errors_checker();
+            textBox21.Text = cheker.textBox_checker(text);
+            if (textBox21.Text != "")
+            {
+                try
+                {
+                    int current_row = dataGridView1.CurrentCell.RowIndex;
+                    application_table.Rows[current_row][9] = Double.Parse(textBox21.Text);
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show("Входная строка имела не верный формат");
+                }
+            }
+        }
+
+        private void textBox22_TextChanged(object sender, EventArgs e)
+        {
+            string text = textBox22.Text;
+            Errors_checker cheker = new Errors_checker();
+            textBox22.Text = cheker.textBox_checker(text);
+
+            if (textBox22.Text != "")
+            {
+                try
+                {
+                    int current_row = dataGridView1.CurrentCell.RowIndex;
+                    application_table.Rows[current_row][10] = Double.Parse(textBox22.Text);
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show("Входная строка имела не верный формат");
+                }
+            }
         }
     }
 }
