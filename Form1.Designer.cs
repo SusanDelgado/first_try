@@ -41,24 +41,16 @@ namespace Создатель_расчетов
             this.label1 = new System.Windows.Forms.Label();
             this.button7 = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.groupBox18 = new System.Windows.Forms.GroupBox();
+            this.textBox22 = new System.Windows.Forms.TextBox();
+            this.label18 = new System.Windows.Forms.Label();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox14 = new System.Windows.Forms.CheckBox();
-            this.checkBox13 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.label37 = new System.Windows.Forms.Label();
+            this.comboBox5 = new System.Windows.Forms.ComboBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.groupBox17 = new System.Windows.Forms.GroupBox();
-            this.checkBox10 = new System.Windows.Forms.CheckBox();
-            this.checkBox11 = new System.Windows.Forms.CheckBox();
-            this.checkBox12 = new System.Windows.Forms.CheckBox();
-            this.groupBox16 = new System.Windows.Forms.GroupBox();
-            this.checkBox7 = new System.Windows.Forms.CheckBox();
-            this.checkBox8 = new System.Windows.Forms.CheckBox();
-            this.checkBox9 = new System.Windows.Forms.CheckBox();
             this.groupBox15 = new System.Windows.Forms.GroupBox();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.checkBox5 = new System.Windows.Forms.CheckBox();
-            this.checkBox6 = new System.Windows.Forms.CheckBox();
+            this.textBox21 = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.label8 = new System.Windows.Forms.Label();
@@ -107,6 +99,13 @@ namespace Создатель_расчетов
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.groupBox13 = new System.Windows.Forms.GroupBox();
+            this.textBox17 = new System.Windows.Forms.TextBox();
+            this.textBox18 = new System.Windows.Forms.TextBox();
+            this.textBox15 = new System.Windows.Forms.TextBox();
+            this.textBox16 = new System.Windows.Forms.TextBox();
+            this.label36 = new System.Windows.Forms.Label();
+            this.label35 = new System.Windows.Forms.Label();
+            this.label34 = new System.Windows.Forms.Label();
             this.label33 = new System.Windows.Forms.Label();
             this.textBox13 = new System.Windows.Forms.TextBox();
             this.textBox12 = new System.Windows.Forms.TextBox();
@@ -118,38 +117,27 @@ namespace Создатель_расчетов
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.groupBox14 = new System.Windows.Forms.GroupBox();
-            this.label25 = new System.Windows.Forms.Label();
-            this.label27 = new System.Windows.Forms.Label();
-            this.label28 = new System.Windows.Forms.Label();
             this.textBox11 = new System.Windows.Forms.TextBox();
-            this.numericUpDown7 = new System.Windows.Forms.NumericUpDown();
+            this.textBox20 = new System.Windows.Forms.TextBox();
+            this.label27 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label17 = new System.Windows.Forms.Label();
+            this.textBox19 = new System.Windows.Forms.TextBox();
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.numericUpDown5 = new System.Windows.Forms.NumericUpDown();
             this.label19 = new System.Windows.Forms.Label();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
-            this.label21 = new System.Windows.Forms.Label();
             this.textBox10 = new System.Windows.Forms.TextBox();
-            this.label24 = new System.Windows.Forms.Label();
+            this.textBox23 = new System.Windows.Forms.TextBox();
+            this.label21 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
-            this.numericUpDown6 = new System.Windows.Forms.NumericUpDown();
+            this.groupBox16 = new System.Windows.Forms.GroupBox();
+            this.textBox24 = new System.Windows.Forms.TextBox();
             this.label23 = new System.Windows.Forms.Label();
-            this.label34 = new System.Windows.Forms.Label();
-            this.label35 = new System.Windows.Forms.Label();
-            this.label36 = new System.Windows.Forms.Label();
-            this.textBox15 = new System.Windows.Forms.TextBox();
-            this.textBox16 = new System.Windows.Forms.TextBox();
-            this.textBox17 = new System.Windows.Forms.TextBox();
-            this.textBox18 = new System.Windows.Forms.TextBox();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
+            this.groupBox18.SuspendLayout();
             this.groupBox10.SuspendLayout();
-            this.groupBox17.SuspendLayout();
-            this.groupBox16.SuspendLayout();
             this.groupBox15.SuspendLayout();
             this.groupBox6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
@@ -172,11 +160,9 @@ namespace Создатель_расчетов
             this.groupBox13.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox14.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown7)).BeginInit();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).BeginInit();
             this.groupBox7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown6)).BeginInit();
+            this.groupBox16.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox3
@@ -323,10 +309,10 @@ namespace Создатель_расчетов
             this.groupBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox4.Controls.Add(this.groupBox16);
+            this.groupBox4.Controls.Add(this.groupBox18);
             this.groupBox4.Controls.Add(this.groupBox10);
             this.groupBox4.Controls.Add(this.checkBox1);
-            this.groupBox4.Controls.Add(this.groupBox17);
-            this.groupBox4.Controls.Add(this.groupBox16);
             this.groupBox4.Controls.Add(this.groupBox15);
             this.groupBox4.Controls.Add(this.groupBox6);
             this.groupBox4.Controls.Add(this.groupBox5);
@@ -340,66 +326,73 @@ namespace Создатель_расчетов
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Используемые расходеные материалы";
             // 
+            // groupBox18
+            // 
+            this.groupBox18.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.groupBox18.Controls.Add(this.textBox22);
+            this.groupBox18.Controls.Add(this.label18);
+            this.groupBox18.Location = new System.Drawing.Point(6, 546);
+            this.groupBox18.Name = "groupBox18";
+            this.groupBox18.Size = new System.Drawing.Size(428, 57);
+            this.groupBox18.TabIndex = 15;
+            this.groupBox18.TabStop = false;
+            this.groupBox18.Text = "Перфорация на металическую пружину";
+            // 
+            // textBox22
+            // 
+            this.textBox22.Location = new System.Drawing.Point(273, 19);
+            this.textBox22.Name = "textBox22";
+            this.textBox22.Size = new System.Drawing.Size(100, 26);
+            this.textBox22.TabIndex = 14;
+            this.textBox22.TextChanged += new System.EventHandler(this.textBox22_TextChanged);
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(6, 22);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(258, 19);
+            this.label18.TabIndex = 13;
+            this.label18.Text = "Количество израсходованых петель: ";
+            // 
             // groupBox10
             // 
-            this.groupBox10.Controls.Add(this.checkBox2);
-            this.groupBox10.Controls.Add(this.checkBox14);
-            this.groupBox10.Controls.Add(this.checkBox13);
-            this.groupBox10.Controls.Add(this.checkBox3);
-            this.groupBox10.Location = new System.Drawing.Point(6, 473);
+            this.groupBox10.Controls.Add(this.label37);
+            this.groupBox10.Controls.Add(this.comboBox5);
+            this.groupBox10.Location = new System.Drawing.Point(6, 416);
             this.groupBox10.Name = "groupBox10";
-            this.groupBox10.Size = new System.Drawing.Size(428, 69);
-            this.groupBox10.TabIndex = 11;
+            this.groupBox10.Size = new System.Drawing.Size(428, 63);
+            this.groupBox10.TabIndex = 13;
             this.groupBox10.TabStop = false;
+            this.groupBox10.Text = "Твердый переплет";
             // 
-            // checkBox2
+            // label37
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(5, 39);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(47, 23);
-            this.checkBox2.TabIndex = 7;
-            this.checkBox2.Text = "А3";
-            this.checkBox2.UseVisualStyleBackColor = true;
-            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
+            this.label37.AutoSize = true;
+            this.label37.Location = new System.Drawing.Point(6, 32);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(69, 19);
+            this.label37.TabIndex = 11;
+            this.label37.Text = "Формат: ";
             // 
-            // checkBox14
+            // comboBox5
             // 
-            this.checkBox14.AutoSize = true;
-            this.checkBox14.Location = new System.Drawing.Point(5, 10);
-            this.checkBox14.Name = "checkBox14";
-            this.checkBox14.Size = new System.Drawing.Size(153, 23);
-            this.checkBox14.TabIndex = 3;
-            this.checkBox14.Text = "Твердый переплет";
-            this.checkBox14.UseVisualStyleBackColor = true;
-            this.checkBox14.CheckedChanged += new System.EventHandler(this.checkBox14_CheckedChanged);
-            // 
-            // checkBox13
-            // 
-            this.checkBox13.AutoSize = true;
-            this.checkBox13.Location = new System.Drawing.Point(111, 39);
-            this.checkBox13.Name = "checkBox13";
-            this.checkBox13.Size = new System.Drawing.Size(47, 23);
-            this.checkBox13.TabIndex = 5;
-            this.checkBox13.Text = "А5";
-            this.checkBox13.UseVisualStyleBackColor = true;
-            this.checkBox13.CheckedChanged += new System.EventHandler(this.checkBox13_CheckedChanged);
-            // 
-            // checkBox3
-            // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(58, 39);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(47, 23);
-            this.checkBox3.TabIndex = 6;
-            this.checkBox3.Text = "А4";
-            this.checkBox3.UseVisualStyleBackColor = true;
-            this.checkBox3.CheckedChanged += new System.EventHandler(this.checkBox3_CheckedChanged);
+            this.comboBox5.FormattingEnabled = true;
+            this.comboBox5.Items.AddRange(new object[] {
+            "Нет",
+            "А3",
+            "А4",
+            "А5"});
+            this.comboBox5.Location = new System.Drawing.Point(122, 29);
+            this.comboBox5.Name = "comboBox5";
+            this.comboBox5.Size = new System.Drawing.Size(121, 27);
+            this.comboBox5.TabIndex = 12;
+            this.comboBox5.DropDownClosed += new System.EventHandler(this.comboBox5_DropDownClosed);
             // 
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(11, 548);
+            this.checkBox1.Location = new System.Drawing.Point(440, 19);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(133, 23);
             this.checkBox1.TabIndex = 2;
@@ -407,137 +400,34 @@ namespace Создатель_расчетов
             this.checkBox1.UseVisualStyleBackColor = true;
             this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
-            // groupBox17
-            // 
-            this.groupBox17.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.groupBox17.Controls.Add(this.checkBox10);
-            this.groupBox17.Controls.Add(this.checkBox11);
-            this.groupBox17.Controls.Add(this.checkBox12);
-            this.groupBox17.Location = new System.Drawing.Point(688, 353);
-            this.groupBox17.Name = "groupBox17";
-            this.groupBox17.Size = new System.Drawing.Size(161, 130);
-            this.groupBox17.TabIndex = 10;
-            this.groupBox17.TabStop = false;
-            this.groupBox17.Text = "Перфорация";
-            this.groupBox17.Visible = false;
-            // 
-            // checkBox10
-            // 
-            this.checkBox10.AutoSize = true;
-            this.checkBox10.Location = new System.Drawing.Point(112, 25);
-            this.checkBox10.Name = "checkBox10";
-            this.checkBox10.Size = new System.Drawing.Size(47, 23);
-            this.checkBox10.TabIndex = 4;
-            this.checkBox10.Text = "А3";
-            this.checkBox10.UseVisualStyleBackColor = true;
-            // 
-            // checkBox11
-            // 
-            this.checkBox11.AutoSize = true;
-            this.checkBox11.Location = new System.Drawing.Point(59, 25);
-            this.checkBox11.Name = "checkBox11";
-            this.checkBox11.Size = new System.Drawing.Size(47, 23);
-            this.checkBox11.TabIndex = 3;
-            this.checkBox11.Text = "А4";
-            this.checkBox11.UseVisualStyleBackColor = true;
-            // 
-            // checkBox12
-            // 
-            this.checkBox12.AutoSize = true;
-            this.checkBox12.Location = new System.Drawing.Point(6, 25);
-            this.checkBox12.Name = "checkBox12";
-            this.checkBox12.Size = new System.Drawing.Size(47, 23);
-            this.checkBox12.TabIndex = 2;
-            this.checkBox12.Text = "А5";
-            this.checkBox12.UseVisualStyleBackColor = true;
-            // 
-            // groupBox16
-            // 
-            this.groupBox16.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.groupBox16.Controls.Add(this.checkBox7);
-            this.groupBox16.Controls.Add(this.checkBox8);
-            this.groupBox16.Controls.Add(this.checkBox9);
-            this.groupBox16.Location = new System.Drawing.Point(688, 206);
-            this.groupBox16.Name = "groupBox16";
-            this.groupBox16.Size = new System.Drawing.Size(161, 141);
-            this.groupBox16.TabIndex = 9;
-            this.groupBox16.TabStop = false;
-            this.groupBox16.Text = "Тиснение";
-            this.groupBox16.Visible = false;
-            // 
-            // checkBox7
-            // 
-            this.checkBox7.AutoSize = true;
-            this.checkBox7.Location = new System.Drawing.Point(112, 25);
-            this.checkBox7.Name = "checkBox7";
-            this.checkBox7.Size = new System.Drawing.Size(47, 23);
-            this.checkBox7.TabIndex = 4;
-            this.checkBox7.Text = "А3";
-            this.checkBox7.UseVisualStyleBackColor = true;
-            // 
-            // checkBox8
-            // 
-            this.checkBox8.AutoSize = true;
-            this.checkBox8.Location = new System.Drawing.Point(59, 25);
-            this.checkBox8.Name = "checkBox8";
-            this.checkBox8.Size = new System.Drawing.Size(47, 23);
-            this.checkBox8.TabIndex = 3;
-            this.checkBox8.Text = "А4";
-            this.checkBox8.UseVisualStyleBackColor = true;
-            // 
-            // checkBox9
-            // 
-            this.checkBox9.AutoSize = true;
-            this.checkBox9.Location = new System.Drawing.Point(6, 25);
-            this.checkBox9.Name = "checkBox9";
-            this.checkBox9.Size = new System.Drawing.Size(47, 23);
-            this.checkBox9.TabIndex = 2;
-            this.checkBox9.Text = "А5";
-            this.checkBox9.UseVisualStyleBackColor = true;
-            // 
             // groupBox15
             // 
             this.groupBox15.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.groupBox15.Controls.Add(this.checkBox4);
-            this.groupBox15.Controls.Add(this.checkBox5);
-            this.groupBox15.Controls.Add(this.checkBox6);
-            this.groupBox15.Location = new System.Drawing.Point(688, 35);
+            this.groupBox15.Controls.Add(this.textBox21);
+            this.groupBox15.Controls.Add(this.label17);
+            this.groupBox15.Location = new System.Drawing.Point(6, 483);
             this.groupBox15.Name = "groupBox15";
-            this.groupBox15.Size = new System.Drawing.Size(161, 165);
+            this.groupBox15.Size = new System.Drawing.Size(428, 57);
             this.groupBox15.TabIndex = 8;
             this.groupBox15.TabStop = false;
             this.groupBox15.Text = "Ламинация";
-            this.groupBox15.Visible = false;
             // 
-            // checkBox4
+            // textBox21
             // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(112, 25);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(47, 23);
-            this.checkBox4.TabIndex = 4;
-            this.checkBox4.Text = "А3";
-            this.checkBox4.UseVisualStyleBackColor = true;
+            this.textBox21.Location = new System.Drawing.Point(273, 19);
+            this.textBox21.Name = "textBox21";
+            this.textBox21.Size = new System.Drawing.Size(100, 26);
+            this.textBox21.TabIndex = 14;
+            this.textBox21.TextChanged += new System.EventHandler(this.textBox21_TextChanged);
             // 
-            // checkBox5
+            // label17
             // 
-            this.checkBox5.AutoSize = true;
-            this.checkBox5.Location = new System.Drawing.Point(59, 25);
-            this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(47, 23);
-            this.checkBox5.TabIndex = 3;
-            this.checkBox5.Text = "А4";
-            this.checkBox5.UseVisualStyleBackColor = true;
-            // 
-            // checkBox6
-            // 
-            this.checkBox6.AutoSize = true;
-            this.checkBox6.Location = new System.Drawing.Point(6, 25);
-            this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(47, 23);
-            this.checkBox6.TabIndex = 2;
-            this.checkBox6.Text = "А5";
-            this.checkBox6.UseVisualStyleBackColor = true;
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(6, 22);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(261, 19);
+            this.label17.TabIndex = 13;
+            this.label17.Text = "Количество израсходованых метров: ";
             // 
             // groupBox6
             // 
@@ -546,7 +436,7 @@ namespace Создатель_расчетов
             this.groupBox6.Controls.Add(this.label8);
             this.groupBox6.Controls.Add(this.comboBox3);
             this.groupBox6.Controls.Add(this.label7);
-            this.groupBox6.Location = new System.Drawing.Point(6, 370);
+            this.groupBox6.Location = new System.Drawing.Point(6, 313);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Size = new System.Drawing.Size(428, 97);
             this.groupBox6.TabIndex = 7;
@@ -607,9 +497,9 @@ namespace Создатель_расчетов
             this.groupBox5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupBox5.Controls.Add(this.numericUpDown2);
             this.groupBox5.Controls.Add(this.label6);
-            this.groupBox5.Location = new System.Drawing.Point(6, 290);
+            this.groupBox5.Location = new System.Drawing.Point(6, 250);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(428, 74);
+            this.groupBox5.Size = new System.Drawing.Size(428, 57);
             this.groupBox5.TabIndex = 6;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Мастер-пленка";
@@ -617,7 +507,7 @@ namespace Создатель_расчетов
             // numericUpDown2
             // 
             this.numericUpDown2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.numericUpDown2.Location = new System.Drawing.Point(122, 15);
+            this.numericUpDown2.Location = new System.Drawing.Point(122, 20);
             this.numericUpDown2.Maximum = new decimal(new int[] {
             99999999,
             0,
@@ -644,7 +534,7 @@ namespace Создатель_расчетов
             // 
             this.comboBox2.DropDownWidth = 400;
             this.comboBox2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.comboBox2.Location = new System.Drawing.Point(6, 257);
+            this.comboBox2.Location = new System.Drawing.Point(6, 222);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(320, 27);
             this.comboBox2.TabIndex = 5;
@@ -656,7 +546,7 @@ namespace Создатель_расчетов
             // 
             // button8
             // 
-            this.button8.Location = new System.Drawing.Point(332, 257);
+            this.button8.Location = new System.Drawing.Point(332, 222);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(102, 27);
             this.button8.TabIndex = 4;
@@ -672,7 +562,7 @@ namespace Создатель_расчетов
             this.dataGridView2.Location = new System.Drawing.Point(6, 19);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersVisible = false;
-            this.dataGridView2.Size = new System.Drawing.Size(428, 232);
+            this.dataGridView2.Size = new System.Drawing.Size(428, 197);
             this.dataGridView2.TabIndex = 1;
             this.dataGridView2.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellEndEdit);
             this.dataGridView2.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellValueChanged);
@@ -1095,12 +985,12 @@ namespace Создатель_расчетов
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.groupBox7);
             this.tabPage3.Controls.Add(this.groupBox13);
             this.tabPage3.Controls.Add(this.groupBox12);
             this.tabPage3.Controls.Add(this.groupBox1);
             this.tabPage3.Controls.Add(this.groupBox14);
             this.tabPage3.Controls.Add(this.groupBox2);
-            this.tabPage3.Controls.Add(this.groupBox7);
             this.tabPage3.Controls.Add(this.groupBox11);
             this.tabPage3.Controls.Add(this.groupBox9);
             this.tabPage3.Controls.Add(this.groupBox8);
@@ -1125,12 +1015,74 @@ namespace Создатель_расчетов
             this.groupBox13.Controls.Add(this.textBox12);
             this.groupBox13.Controls.Add(this.label30);
             this.groupBox13.Controls.Add(this.label29);
-            this.groupBox13.Location = new System.Drawing.Point(861, 280);
+            this.groupBox13.Location = new System.Drawing.Point(861, 525);
             this.groupBox13.Name = "groupBox13";
             this.groupBox13.Size = new System.Drawing.Size(416, 117);
             this.groupBox13.TabIndex = 9;
             this.groupBox13.TabStop = false;
             this.groupBox13.Text = "Твердый переплет";
+            // 
+            // textBox17
+            // 
+            this.textBox17.Location = new System.Drawing.Point(336, 74);
+            this.textBox17.Name = "textBox17";
+            this.textBox17.Size = new System.Drawing.Size(71, 26);
+            this.textBox17.TabIndex = 20;
+            this.textBox17.TextChanged += new System.EventHandler(this.textBox17_TextChanged);
+            // 
+            // textBox18
+            // 
+            this.textBox18.Location = new System.Drawing.Point(336, 42);
+            this.textBox18.Name = "textBox18";
+            this.textBox18.Size = new System.Drawing.Size(71, 26);
+            this.textBox18.TabIndex = 19;
+            this.textBox18.TextChanged += new System.EventHandler(this.textBox18_TextChanged);
+            // 
+            // textBox15
+            // 
+            this.textBox15.Location = new System.Drawing.Point(259, 74);
+            this.textBox15.Name = "textBox15";
+            this.textBox15.Size = new System.Drawing.Size(71, 26);
+            this.textBox15.TabIndex = 18;
+            this.textBox15.TextChanged += new System.EventHandler(this.textBox15_TextChanged);
+            // 
+            // textBox16
+            // 
+            this.textBox16.Location = new System.Drawing.Point(259, 42);
+            this.textBox16.Name = "textBox16";
+            this.textBox16.Size = new System.Drawing.Size(71, 26);
+            this.textBox16.TabIndex = 17;
+            this.textBox16.TextChanged += new System.EventHandler(this.textBox16_TextChanged);
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label36.Location = new System.Drawing.Point(357, 21);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(28, 19);
+            this.label36.TabIndex = 16;
+            this.label36.Text = "A5";
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label35.Location = new System.Drawing.Point(280, 21);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(28, 19);
+            this.label35.TabIndex = 15;
+            this.label35.Text = "A4";
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label34.Location = new System.Drawing.Point(201, 20);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(28, 19);
+            this.label34.TabIndex = 14;
+            this.label34.Text = "A3";
             // 
             // label33
             // 
@@ -1228,66 +1180,39 @@ namespace Создатель_расчетов
             // 
             // groupBox14
             // 
-            this.groupBox14.Controls.Add(this.label25);
-            this.groupBox14.Controls.Add(this.label27);
-            this.groupBox14.Controls.Add(this.label28);
             this.groupBox14.Controls.Add(this.textBox11);
-            this.groupBox14.Controls.Add(this.numericUpDown7);
+            this.groupBox14.Controls.Add(this.textBox20);
+            this.groupBox14.Controls.Add(this.label27);
             this.groupBox14.Controls.Add(this.label26);
-            this.groupBox14.Location = new System.Drawing.Point(862, 594);
+            this.groupBox14.Location = new System.Drawing.Point(861, 362);
             this.groupBox14.Name = "groupBox14";
-            this.groupBox14.Size = new System.Drawing.Size(338, 102);
+            this.groupBox14.Size = new System.Drawing.Size(288, 75);
             this.groupBox14.TabIndex = 10;
             this.groupBox14.TabStop = false;
             this.groupBox14.Text = "Перфорация";
-            this.groupBox14.Visible = false;
             // 
-            // label25
+            // textBox11
             // 
-            this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(165, 78);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(53, 19);
-            this.label25.TabIndex = 23;
-            this.label25.Text = "label25";
-            this.label25.Visible = false;
+            this.textBox11.Location = new System.Drawing.Point(182, 13);
+            this.textBox11.Name = "textBox11";
+            this.textBox11.Size = new System.Drawing.Size(100, 26);
+            this.textBox11.TabIndex = 12;
+            // 
+            // textBox20
+            // 
+            this.textBox20.Location = new System.Drawing.Point(182, 43);
+            this.textBox20.Name = "textBox20";
+            this.textBox20.Size = new System.Drawing.Size(100, 26);
+            this.textBox20.TabIndex = 13;
             // 
             // label27
             // 
             this.label27.AutoSize = true;
             this.label27.Location = new System.Drawing.Point(6, 22);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(157, 19);
+            this.label27.Size = new System.Drawing.Size(141, 19);
             this.label27.TabIndex = 18;
-            this.label27.Text = "Количество в бобине:";
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(6, 78);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(123, 19);
-            this.label28.TabIndex = 21;
-            this.label28.Text = "Стоимость 1 шт.:";
-            // 
-            // textBox11
-            // 
-            this.textBox11.Location = new System.Drawing.Point(169, 43);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(119, 26);
-            this.textBox11.TabIndex = 22;
-            // 
-            // numericUpDown7
-            // 
-            this.numericUpDown7.Location = new System.Drawing.Point(169, 15);
-            this.numericUpDown7.Maximum = new decimal(new int[] {
-            99999999,
-            0,
-            0,
-            0});
-            this.numericUpDown7.Name = "numericUpDown7";
-            this.numericUpDown7.Size = new System.Drawing.Size(120, 26);
-            this.numericUpDown7.TabIndex = 19;
+            this.label27.Text = "Количество петель:";
             // 
             // label26
             // 
@@ -1300,35 +1225,29 @@ namespace Создатель_расчетов
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.label17);
+            this.groupBox2.Controls.Add(this.textBox19);
             this.groupBox2.Controls.Add(this.textBox9);
             this.groupBox2.Controls.Add(this.label20);
-            this.groupBox2.Controls.Add(this.label18);
-            this.groupBox2.Controls.Add(this.numericUpDown5);
             this.groupBox2.Controls.Add(this.label19);
-            this.groupBox2.Location = new System.Drawing.Point(996, 458);
+            this.groupBox2.Location = new System.Drawing.Point(861, 280);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(339, 102);
+            this.groupBox2.Size = new System.Drawing.Size(288, 76);
             this.groupBox2.TabIndex = 7;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Ламинация";
-            this.groupBox2.Visible = false;
             // 
-            // label17
+            // textBox19
             // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(158, 78);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(53, 19);
-            this.label17.TabIndex = 11;
-            this.label17.Text = "label17";
-            this.label17.Visible = false;
+            this.textBox19.Location = new System.Drawing.Point(181, 15);
+            this.textBox19.Name = "textBox19";
+            this.textBox19.Size = new System.Drawing.Size(100, 26);
+            this.textBox19.TabIndex = 11;
             // 
             // textBox9
             // 
-            this.textBox9.Location = new System.Drawing.Point(162, 43);
+            this.textBox9.Location = new System.Drawing.Point(181, 44);
             this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(119, 26);
+            this.textBox9.Size = new System.Drawing.Size(100, 26);
             this.textBox9.TabIndex = 10;
             // 
             // label20
@@ -1336,30 +1255,9 @@ namespace Создатель_расчетов
             this.label20.AutoSize = true;
             this.label20.Location = new System.Drawing.Point(6, 22);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(154, 19);
+            this.label20.Size = new System.Drawing.Size(144, 19);
             this.label20.TabIndex = 6;
-            this.label20.Text = "Количество в рулоне:";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(6, 78);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(123, 19);
-            this.label18.TabIndex = 9;
-            this.label18.Text = "Стоимость 1 шт.:";
-            // 
-            // numericUpDown5
-            // 
-            this.numericUpDown5.Location = new System.Drawing.Point(162, 15);
-            this.numericUpDown5.Maximum = new decimal(new int[] {
-            99999999,
-            0,
-            0,
-            0});
-            this.numericUpDown5.Name = "numericUpDown5";
-            this.numericUpDown5.Size = new System.Drawing.Size(120, 26);
-            this.numericUpDown5.TabIndex = 7;
+            this.label20.Text = "Количество метров:";
             // 
             // label19
             // 
@@ -1372,137 +1270,77 @@ namespace Создатель_расчетов
             // 
             // groupBox7
             // 
-            this.groupBox7.Controls.Add(this.label21);
             this.groupBox7.Controls.Add(this.textBox10);
-            this.groupBox7.Controls.Add(this.label24);
+            this.groupBox7.Controls.Add(this.textBox23);
+            this.groupBox7.Controls.Add(this.label21);
             this.groupBox7.Controls.Add(this.label22);
-            this.groupBox7.Controls.Add(this.numericUpDown6);
-            this.groupBox7.Controls.Add(this.label23);
-            this.groupBox7.Location = new System.Drawing.Point(861, 485);
+            this.groupBox7.Location = new System.Drawing.Point(861, 443);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(288, 103);
-            this.groupBox7.TabIndex = 8;
+            this.groupBox7.Size = new System.Drawing.Size(288, 76);
+            this.groupBox7.TabIndex = 12;
             this.groupBox7.TabStop = false;
-            this.groupBox7.Text = "Теснение";
-            this.groupBox7.Visible = false;
+            this.groupBox7.Text = "Тиснение";
+            // 
+            // textBox10
+            // 
+            this.textBox10.Location = new System.Drawing.Point(181, 15);
+            this.textBox10.Name = "textBox10";
+            this.textBox10.Size = new System.Drawing.Size(100, 26);
+            this.textBox10.TabIndex = 11;
+            // 
+            // textBox23
+            // 
+            this.textBox23.Location = new System.Drawing.Point(181, 44);
+            this.textBox23.Name = "textBox23";
+            this.textBox23.Size = new System.Drawing.Size(100, 26);
+            this.textBox23.TabIndex = 10;
             // 
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(158, 78);
+            this.label21.Location = new System.Drawing.Point(6, 22);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(53, 19);
-            this.label21.TabIndex = 17;
-            this.label21.Text = "label21";
-            this.label21.Visible = false;
-            // 
-            // textBox10
-            // 
-            this.textBox10.Location = new System.Drawing.Point(162, 43);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(119, 26);
-            this.textBox10.TabIndex = 16;
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(6, 50);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(136, 19);
-            this.label24.TabIndex = 14;
-            this.label24.Text = "Стоимость рулона:";
+            this.label21.Size = new System.Drawing.Size(144, 19);
+            this.label21.TabIndex = 6;
+            this.label21.Text = "Количество метров:";
             // 
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(6, 22);
+            this.label22.Location = new System.Drawing.Point(6, 50);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(154, 19);
-            this.label22.TabIndex = 12;
-            this.label22.Text = "Количество в рулоне:";
+            this.label22.Size = new System.Drawing.Size(136, 19);
+            this.label22.TabIndex = 8;
+            this.label22.Text = "Стоимость рулона:";
             // 
-            // numericUpDown6
+            // groupBox16
             // 
-            this.numericUpDown6.Location = new System.Drawing.Point(162, 15);
-            this.numericUpDown6.Maximum = new decimal(new int[] {
-            99999999,
-            0,
-            0,
-            0});
-            this.numericUpDown6.Name = "numericUpDown6";
-            this.numericUpDown6.Size = new System.Drawing.Size(120, 26);
-            this.numericUpDown6.TabIndex = 13;
+            this.groupBox16.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.groupBox16.Controls.Add(this.textBox24);
+            this.groupBox16.Controls.Add(this.label23);
+            this.groupBox16.Location = new System.Drawing.Point(6, 607);
+            this.groupBox16.Name = "groupBox16";
+            this.groupBox16.Size = new System.Drawing.Size(428, 57);
+            this.groupBox16.TabIndex = 15;
+            this.groupBox16.TabStop = false;
+            this.groupBox16.Text = "Тиснение";
+            // 
+            // textBox24
+            // 
+            this.textBox24.Location = new System.Drawing.Point(273, 25);
+            this.textBox24.Name = "textBox24";
+            this.textBox24.Size = new System.Drawing.Size(100, 26);
+            this.textBox24.TabIndex = 14;
+            this.textBox24.TextChanged += new System.EventHandler(this.textBox24_TextChanged);
             // 
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(6, 78);
+            this.label23.Location = new System.Drawing.Point(6, 22);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(123, 19);
-            this.label23.TabIndex = 15;
-            this.label23.Text = "Стоимость 1 шт.:";
-            // 
-            // label34
-            // 
-            this.label34.AutoSize = true;
-            this.label34.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label34.Location = new System.Drawing.Point(201, 20);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(28, 19);
-            this.label34.TabIndex = 14;
-            this.label34.Text = "A3";
-            // 
-            // label35
-            // 
-            this.label35.AutoSize = true;
-            this.label35.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label35.Location = new System.Drawing.Point(280, 21);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(28, 19);
-            this.label35.TabIndex = 15;
-            this.label35.Text = "A4";
-            // 
-            // label36
-            // 
-            this.label36.AutoSize = true;
-            this.label36.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label36.Location = new System.Drawing.Point(357, 21);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(28, 19);
-            this.label36.TabIndex = 16;
-            this.label36.Text = "A5";
-            // 
-            // textBox15
-            // 
-            this.textBox15.Location = new System.Drawing.Point(259, 74);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(71, 26);
-            this.textBox15.TabIndex = 18;
-            this.textBox15.TextChanged += new System.EventHandler(this.textBox15_TextChanged);
-            // 
-            // textBox16
-            // 
-            this.textBox16.Location = new System.Drawing.Point(259, 42);
-            this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(71, 26);
-            this.textBox16.TabIndex = 17;
-            this.textBox16.TextChanged += new System.EventHandler(this.textBox16_TextChanged);
-            // 
-            // textBox17
-            // 
-            this.textBox17.Location = new System.Drawing.Point(336, 74);
-            this.textBox17.Name = "textBox17";
-            this.textBox17.Size = new System.Drawing.Size(71, 26);
-            this.textBox17.TabIndex = 20;
-            this.textBox17.TextChanged += new System.EventHandler(this.textBox17_TextChanged);
-            // 
-            // textBox18
-            // 
-            this.textBox18.Location = new System.Drawing.Point(336, 42);
-            this.textBox18.Name = "textBox18";
-            this.textBox18.Size = new System.Drawing.Size(71, 26);
-            this.textBox18.TabIndex = 19;
-            this.textBox18.TextChanged += new System.EventHandler(this.textBox18_TextChanged);
+            this.label23.Size = new System.Drawing.Size(261, 19);
+            this.label23.TabIndex = 13;
+            this.label23.Text = "Количество израсходованых метров: ";
             // 
             // Form1
             // 
@@ -1523,12 +1361,10 @@ namespace Создатель_расчетов
             this.groupBox3.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            this.groupBox18.ResumeLayout(false);
+            this.groupBox18.PerformLayout();
             this.groupBox10.ResumeLayout(false);
             this.groupBox10.PerformLayout();
-            this.groupBox17.ResumeLayout(false);
-            this.groupBox17.PerformLayout();
-            this.groupBox16.ResumeLayout(false);
-            this.groupBox16.PerformLayout();
             this.groupBox15.ResumeLayout(false);
             this.groupBox15.PerformLayout();
             this.groupBox6.ResumeLayout(false);
@@ -1560,13 +1396,12 @@ namespace Создатель_расчетов
             this.groupBox1.PerformLayout();
             this.groupBox14.ResumeLayout(false);
             this.groupBox14.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown7)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).EndInit();
             this.groupBox7.ResumeLayout(false);
             this.groupBox7.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown6)).EndInit();
+            this.groupBox16.ResumeLayout(false);
+            this.groupBox16.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1629,7 +1464,6 @@ namespace Создатель_расчетов
         private System.Windows.Forms.NumericUpDown numericUpDown4;
         private System.Windows.Forms.GroupBox groupBox14;
         private System.Windows.Forms.GroupBox groupBox13;
-        private System.Windows.Forms.GroupBox groupBox7;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label15;
@@ -1640,47 +1474,18 @@ namespace Создатель_расчетов
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.NumericUpDown numericUpDown7;
         private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.Label label17;
         private System.Windows.Forms.TextBox textBox9;
         private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.NumericUpDown numericUpDown5;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.NumericUpDown numericUpDown6;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.CheckBox checkBox14;
-        private System.Windows.Forms.GroupBox groupBox17;
-        private System.Windows.Forms.CheckBox checkBox10;
-        private System.Windows.Forms.CheckBox checkBox11;
-        private System.Windows.Forms.CheckBox checkBox12;
-        private System.Windows.Forms.GroupBox groupBox16;
-        private System.Windows.Forms.CheckBox checkBox7;
-        private System.Windows.Forms.CheckBox checkBox8;
-        private System.Windows.Forms.CheckBox checkBox9;
         private System.Windows.Forms.GroupBox groupBox15;
-        private System.Windows.Forms.CheckBox checkBox4;
-        private System.Windows.Forms.CheckBox checkBox5;
-        private System.Windows.Forms.CheckBox checkBox6;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.TextBox textBox14;
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.ComboBox comboBox4;
         private System.Windows.Forms.Label label33;
-        private System.Windows.Forms.GroupBox groupBox10;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox13;
-        private System.Windows.Forms.CheckBox checkBox3;
         private System.Windows.Forms.TextBox textBox17;
         private System.Windows.Forms.TextBox textBox18;
         private System.Windows.Forms.TextBox textBox15;
@@ -1688,6 +1493,25 @@ namespace Создатель_расчетов
         private System.Windows.Forms.Label label36;
         private System.Windows.Forms.Label label35;
         private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.GroupBox groupBox10;
+        private System.Windows.Forms.Label label37;
+        private System.Windows.Forms.ComboBox comboBox5;
+        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.TextBox textBox20;
+        private System.Windows.Forms.TextBox textBox19;
+        private System.Windows.Forms.GroupBox groupBox18;
+        private System.Windows.Forms.TextBox textBox22;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.TextBox textBox21;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.GroupBox groupBox16;
+        private System.Windows.Forms.TextBox textBox24;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.GroupBox groupBox7;
+        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox textBox23;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label22;
     }
 }
 
